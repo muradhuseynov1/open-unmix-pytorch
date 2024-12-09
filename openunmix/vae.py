@@ -110,7 +110,7 @@ class AudioDataset(Dataset):
             # print(f"Resampled audio to {target_sample_rate} Hz. Shape: {audio.shape}")
 
         # Truncate or pad audio to match target length
-        target_length = 2974
+        target_length = 16000 * 5
         if audio.shape[0] > target_length:
             audio = audio[:target_length]  # Truncate
             # print(f"Truncated audio. Shape: {audio.shape}")
