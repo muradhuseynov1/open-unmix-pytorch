@@ -14,7 +14,9 @@ class VAE(nn.Module):
         self.input_dim = input_dim
         self.latent_dim = latent_dim
 
-        dims = [2379, 1788, 1192, 596]
+        # dims = [2379, 1788, 1192, 596]
+        dims = [24000, 16000, 8000, 2048]
+        
 
         # Encoder: Five fully connected layers with decreasing dimensions
         self.fc1 = nn.Linear(input_dim, dims[0])
